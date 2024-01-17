@@ -1,6 +1,8 @@
 const ProductList = () => {
     return (  
-        <h2>Strona magazynu produktów.</h2>
+        <div className="product-list">
+            <h2>Magazyn produktów.</h2>
+        </div>
     );
 }
  

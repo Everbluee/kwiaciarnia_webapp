@@ -1,8 +1,4 @@
-// import useFetch from "./useFetch";
-
 const Home = () => {
-    // const { error, isPending, data } = useFetch('http://localhost:8000')
-
     return (  
         <><div className="home">
             <h2>Witamy na stronie internetowej Kwiaciarni "Gardena"</h2>
@@ -10,8 +6,6 @@ const Home = () => {
                 Na tej stronie jesteś w stanie zarządzać zasobami tej kwiaciarni. Na pasku nawigacji znajdziesz przyciski,
                 które przekierują Cię do odpowiednich stron. Każda z nich odpowiada za ważne człony naszego sklepu.
             </p>
-            {/* { error && <div>{ error }</div> }
-            { isPending && <div>Loading...</div> } */}
         </div>
         <br></br>
         <div className="container">

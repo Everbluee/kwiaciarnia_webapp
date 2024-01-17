@@ -4,8 +4,8 @@ import logo from './logo_gardena.jpg';
 
 const Foot = <Footer container>
   <div className="w-full">
-    <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-      <div>
+    <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1" >
+      <div >
         <Footer.Brand
           href="/"
           src={logo}
@@ -16,22 +16,22 @@ const Foot = <Footer container>
         <div>
           <Footer.Title title="about" />
           <Footer.LinkGroup col>
-            <Footer.Link href="#">Kwiaciarnia</Footer.Link>
-            <Footer.Link href="#">Dostawcy</Footer.Link>
+            <Footer.Link href="#" style={{textDecoration: 'none'}}>Kwiaciarnia</Footer.Link>
+            <Footer.Link href="#" style={{textDecoration: 'none'}}>Dostawcy</Footer.Link>
           </Footer.LinkGroup>
         </div>
         <div>
           <Footer.Title title="Follow us" />
           <Footer.LinkGroup col>
-            <Footer.Link href="#">Instagram</Footer.Link>
-            <Footer.Link href="#">Facebook</Footer.Link>
+            <Footer.Link href="#" style={{textDecoration: 'none'}}>Instagram</Footer.Link>
+            <Footer.Link href="#" style={{textDecoration: 'none'}}>Facebook</Footer.Link>
           </Footer.LinkGroup>
         </div>
         <div>
           <Footer.Title title="Legal" />
           <Footer.LinkGroup col>
-            <Footer.Link href="#">Privacy Policy</Footer.Link>
-            <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
+            <Footer.Link href="#" style={{textDecoration: 'none'}}>Privacy Policy</Footer.Link>
+            <Footer.Link href="#" style={{textDecoration: 'none'}}>Terms &amp; Conditions</Footer.Link>
           </Footer.LinkGroup>
         </div>
       </div>

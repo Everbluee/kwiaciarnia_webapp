@@ -69,7 +69,11 @@
 }
 .container p{
   align-items: center;
-  padding: 20px;
+  padding: 10px;
+}
+.container h2{
+  align-items: center;
+  padding: 10px;
 }
 .w-full {
   max-width: 1300px;

@@ -16,9 +16,9 @@ const useFetch = (url) => {
         } 
         return res.json();
       })
-      .then(data => {
+      .then(data1 => {
         setIsPending(false);
-        setData(data);
+        setData(data1);
         setError(null);
       })
       .catch(err => {
