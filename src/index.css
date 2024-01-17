@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom: 2px solid #f2f2f2;
+  background-color: rgb(238, 255, 236);
+}
+.navbar h1 {
+  color: #40a023;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  
+  margin-left: 17px;
+  text-decoration: none;
+  padding: 5px;
+}
+.navbar a:hover {
+  color: #ca8ea0;
+}
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  align-items: center;
+}
+.icons {
+  position: relative;
+  top: 5px;
+  bottom: 5px
+}
+.buttons {
+  color: white;
+  background-color: #40a023;
+  border-radius: 8px
+}
+.buttons:hover {
+  box-shadow: 1px 3px 5px #312e2e;
+}
+.box {
+  display: block;
+  max-width: 400px;
+  min-width: 300px;
+  max-height: max-content;
+  min-height: min-content;
+  /* align-items: center; */
+  background-color: #a8e296;
+  box-shadow: 1px 3px 5px #312e2e;
+}
+.container {
+  display: flex;
+  gap: 1rem;
+  border: 5px solid var(--color-primary);
+  padding: 20px;
+}
+.container p{
+  align-items: center;
+  padding: 20px;
+}
+.w-full {
+  max-width: 1300px;
+  align-items: center;
+  /* margin: 40px auto; */
+  margin: auto;
 }
