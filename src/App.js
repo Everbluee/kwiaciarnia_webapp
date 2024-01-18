@@ -1,7 +1,7 @@
 import './App.css';
-import Nav from './nav';
+import Nav from './components/nav';
 import Home from './pages/Home';
-import Foot from './footer'
+import Foot from './components/footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductList from './pages/ProductList';
 import Employees from './pages/Employees';

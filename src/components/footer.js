@@ -1,6 +1,4 @@
 import { Footer } from 'flowbite-react';
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-icons/bs';
-import logo from './img/logo_gardena.jpg';
 
 const Foot = <Footer container>
   <div className="w-full text-center">
@@ -16,8 +14,8 @@ const Foot = <Footer container>
         </Footer.LinkGroup>
     </div>
     <Footer.Divider />
-    <div className="w-full sm:flex sm:items-center sm:justify-between">
-      <Footer.Copyright href="#" by="KWIACIARNIA Gardena" year={2024} />
+      <div className="w-full sm:flex sm:items-center sm:justify-between">
+        <Footer.Copyright href="#" by="KWIACIARNIA Gardena" year={2024} />
     </div>
   </div>
 </Footer>;
