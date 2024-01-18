@@ -1,24 +1,28 @@
 import './App.css';
 import Nav from './nav';
-import Home from './home';
+import Home from './pages/Home';
 import Foot from './footer'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ProductList from './ProductList';
-import Employees from './Employees';
-import Clients from './Clients';
-import Login from './Login';
-import Orders from './Orders';
-import ProductDetails from './ProductDetails';
-import EmployeeDetails from './EmployeeDetails';
-import ClientDetails from './ClientDetails';
-import OrderDetails from './OrderDetails';
+import ProductList from './pages/ProductList';
+import Employees from './pages/Employees';
+import Clients from './pages/Clients';
+import Login from './pages/Login';
+import Orders from './pages/Orders';
+import ProductDetails from './pages/ProductDetails';
+import EmployeeDetails from './pages/EmployeeDetails';
+import ClientDetails from './pages/ClientDetails';
+import OrderDetails from './pages/OrderDetails';
 
 function App() {
+
   return (
     <Router>
-      <div className="App">
+      <div className="App" 
+        style={{backgroundImage: `url(${require('./img/leaves.jpg')})`, 
+        backgroundAttachment: 'fixed', 
+        backgroundSize: 'cover'}}>
         <Nav />
-        <div className="content">
+        <div className="content" >
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="products/*" element={<ProductList/>}/>
