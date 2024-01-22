@@ -6,13 +6,13 @@
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #ffffff;
 }
 .content {
-  max-width: 900px;
-  margin: 40px auto;
+  max-width: 1200px;
+  margin: auto;
   padding: 20px;
   align-items: center;
+  color: black;
 }
 .icons {
   position: relative;
@@ -23,9 +23,11 @@
   color: white;
   background-color: #568f45;
   border-radius: 8px;
+  border-color: #568f45;
+  border-style: none;
 }
 .buttons:hover {
-  box-shadow: 1px 3px 5px #312e2e;
+  box-shadow: 1px 3px 5px #000000;
 }
 
 /* NAVIGATION BAR */
@@ -37,6 +39,7 @@
   margin: 0 auto;
   border-bottom: 2px solid #f2f2f2;
   background-color: rgb(18, 19, 18);
+  
 }
 .navbar h1 {
   color: #8bc579;
@@ -48,7 +51,7 @@
   margin-left: 17px;
   text-decoration: none;
   padding: 5px;
-  color:#858585;
+  color:#d8d8d8;
 }
 .navbar a:hover {
   color: #adca8e;
@@ -63,14 +66,18 @@
   min-height: min-content;
   box-shadow: 0px 0px 10px 2px #242323;
   border: 3px white solid;
-  background-color: rgba(240, 255, 243, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container {
   display: flex;
   gap: 3rem;
   border: 5px solid var(--color-primary);
   padding: 20px;
+  width: 80%;
+  margin: auto;
 }
 .container p{
   align-items: center;
@@ -80,7 +87,24 @@
   align-items: center;
   padding: 10px;
 }
-.home h2, .home p, .container p, .container h2{
+.home h2, 
+.home p {
+  color: white;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+} 
+
+.container p, 
+.container h2 {
+  color: white;
+}
+
+/* PRODUCT PAGE */
+.product-list {
+  color: white;
+}
+.product-list p {
   color: white;
 }
 
@@ -88,7 +112,6 @@
 .w-full {
   max-width: 95%;
   align-items: center;
-  /* margin: 40px auto; */
   margin: 1px auto;
-  opacity: 0.8
+  background-color: rgb(18, 19, 18);
 }

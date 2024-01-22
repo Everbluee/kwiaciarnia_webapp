@@ -36,7 +36,9 @@ function App() {
             <Route path="login" element={<Login/>}/>
           </Routes>
         </div>
-        {Foot}
+        <div className='footer'>
+          {Foot}
+        </div>
       </div>
     </Router>
   );

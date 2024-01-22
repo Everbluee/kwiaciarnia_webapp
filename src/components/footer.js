@@ -1,21 +1,22 @@
 import { Footer } from 'flowbite-react';
 
-const Foot = <Footer container>
+const Foot = <Footer container className='static inset-x-0 bottom-0'>
   <div className="w-full text-center">
     <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
         <Footer.Brand style={{ textDecoration: 'none' }}
           href="/"
-          name ="KWIACIARNIA Gardena" />
+          name = {<span style={{color: '#8bc579'}}> KWIACIARNIA Gardena </span>} />
         <Footer.LinkGroup style={{ listStyleType: 'none' }}>
-          <Footer.Link href="#" style={{ textDecoration: 'none', color: 'grey' }}>O Nas</Footer.Link>
-          <Footer.Link href="#" style={{ textDecoration: 'none', color: 'grey'  }}>Polityka Prywatności</Footer.Link>
-          <Footer.Link href="#" style={{ textDecoration: 'none', color: 'grey'  }}>Licencje</Footer.Link>
-          <Footer.Link href="#" style={{ textDecoration: 'none', color: 'grey'  }}>Kontakt</Footer.Link>
+          <Footer.Link href="#" style={{ textDecoration: 'none', color: 'white' }}>O Nas</Footer.Link>
+          <Footer.Link href="#" style={{ textDecoration: 'none', color: 'white'  }}>Polityka Prywatności</Footer.Link>
+          <Footer.Link href="#" style={{ textDecoration: 'none', color: 'white'  }}>Licencje</Footer.Link>
+          <Footer.Link href="#" style={{ textDecoration: 'none', color: 'white'  }}>Kontakt</Footer.Link>
         </Footer.LinkGroup>
     </div>
     <Footer.Divider />
-      <div className="w-full sm:flex sm:items-center sm:justify-between">
-        <Footer.Copyright href="#" by="KWIACIARNIA Gardena" year={2024} />
+      <div className="w-full sm:flex sm:items-center sm:left">
+        <Footer.Copyright href="#" year={2024} style={{color: 'white', textDecoration: 'none'}}/>
+        <span style={{color: 'white'}}> KWIACIARNIA Gardena </span>
     </div>
   </div>
 </Footer>;

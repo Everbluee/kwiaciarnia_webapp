@@ -10,7 +10,7 @@ const Nav = () => {
         <nav className="navbar">
         <h1>KWIACIARNIA Gardena <Icon path={mdiSprout} size={1.2} className='icons'/></h1>
             <div className="links">
-                <Link to="/" className='buttons'><Icon path={mdiHome} size={1} className='icons'/></Link>
+                <Link to="/" className='buttons' style={{color: "white"}}><Icon path={mdiHome} size={1} className='icons'/></Link>
                 <Link to="products/">Produkty <FontAwesomeIcon icon={faSeedling}/></Link>
                 <Link to="employees/">Pracownicy <FontAwesomeIcon icon={faUserTie}/> </Link>
                 <Link to="clients/">Klienci <FontAwesomeIcon icon={faUser}/></Link>
