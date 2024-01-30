@@ -1,5 +1,5 @@
-import { Table } from "../components/Table";
-import { Modal } from "../components/Modal";
+import { Table } from "../components/TableClient";
+import { Modal } from "../components/ModalClient";
 import { useState } from "react";
 
 const Clients = () => {
@@ -14,8 +14,8 @@ const Clients = () => {
             tel: "123456789",
             card: "1122334455667788",
             add: "Wrocław 50-500 ul. Rynek 420",
-            regular: "1",
-            status: "live",
+            regular: "Tak",
+            //status: "live",
         },
     ]);
     const [rowToEdit, setRowToEdit] = useState(null);
@@ -44,12 +44,14 @@ const Clients = () => {
 
     return (
         <div className="clients">
+            <h1 style={{letterSpacing: '10px', textAlign: 'center'}} className="box">Klienci</h1><br />
             <Table rows={rows} deleteRow={handleDeleteRow} editRow={handleEditRow} />
             <br />
             <button onClick={() => setModalOpen(true)}
                 className="buttons"
-                style={{ width: '120px', height: '35px' }}>
-                Dodaj Klienta </button>
+                style={{ width: '120px', height: '35px', border: '2px white solid'}}>
+                Dodaj Klienta 
+            </button>
 
             {modalOpen && (
                 <Modal

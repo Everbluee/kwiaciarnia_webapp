@@ -16,17 +16,16 @@ export const Table = ({ rows, deleteRow, editRow }) => {
             <th>Wiek</th>
             <th>E-mail</th>
             <th>Telefon</th>
-            <th>Nr Karty</th>
-            <th>Adres</th>
-            <th style={{whiteSpace: 'nowrap'}}>Czy stały?</th>
+            <th>Wynagrodzenie</th>
+            <th style={{width: '100%'}}>Stanowisko</th>
             {/* <th>Status</th> */}
-            <th>Action</th>
+            <th> . . . </th>
           </tr>
         </thead>
-        <tbody>
+        { rows ? <tbody>
           {rows.map((row, idx) => {
-            const statusText =
-              row.status.charAt(0).toUpperCase() + row.status.slice(1);
+            // const statusText =
+            //   row.status.charAt(0).toUpperCase() + row.status.slice(1);
 
             return (
               <tr key={idx}>
@@ -36,9 +35,8 @@ export const Table = ({ rows, deleteRow, editRow }) => {
                 <td>{row.age}</td>
                 <td>{row.mail}</td>
                 <td>{row.tel}</td>
-                <td>{row.card}</td>
-                <td style={{width: '100%'}}>{row.add}</td>
-                <td>{row.regular}</td>
+                <td>{row.salary}</td>
+                <td style={{width: '100%'}}>{row.pos}</td>
 
                 {/* <td>
                   <span className={`label label-${row.status}`}>
@@ -61,7 +59,7 @@ export const Table = ({ rows, deleteRow, editRow }) => {
               </tr>
             );
           })}
-        </tbody>
+        </tbody> : null}
       </table>
     </div>
   );

@@ -10,12 +10,12 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
       name: "",
       surname: "",
       age: "",
-      mail: "",
+      mail: "example@page.com",
       tel: "",
       add: "",
       card: "",
-      regular: "1",
-      status: "live",
+      regular: "Nie",
+      //status: "live",
     }
   );
   const [errors, setErrors] = useState("");
@@ -115,10 +115,13 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
           </div>
           <div className="form-group">
             <label htmlFor="page">Czy stały</label>
-            <input 
+            <select 
               name="regular" 
               onChange={handleChange} 
-              value={formState.regular} />
+              value={formState.regular}>
+              <option value="Nie">Nie</option>
+              <option value="Tak">Tak</option>
+            </select>
           </div>
           {/* <div className="form-group">
             <label htmlFor="status">Status</label>
@@ -133,7 +136,7 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
             </select>
           </div> */}
           {errors && <div className="error">{`Please include: ${errors}`}</div>}
-          <button type="submit" className="btn" onClick={handleSubmit}>
+          <button type="submit" className="buttons" onClick={handleSubmit} style={{width: '100px', height: '30px'}}>
             Dodaj
           </button>
         </form>

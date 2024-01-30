@@ -13,31 +13,33 @@ table {
   border-collapse: collapse;
   box-shadow: 0px 10px 10px #171717;
   border-radius: 10px;
+  border: 2px white solid;
   width: 100%;
   max-width: 100%;
   margin: auto;
   overflow-x: auto;
-  background-color: #fff;
+  background-color: #d4cba8;
 }
 
 .table thead {
-  background-color: #ccc;
-  color: #222;
+  background-color: rgb(18, 19, 18);
+  color: #fff;
 }
 
 .table th,
 .table td {
   padding: 0.8rem;
+  white-space: nowrap;
 }
 
 .table td {
-  border-top: 0.5px solid #ddd;
+  border-top: 0.5px solid #36311d;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .table tbody tr:hover {
-  background-color: #eee;
+  background-color: #b3ac8d;
 }
 
 .label {
@@ -46,16 +48,20 @@ table {
   color: white;
 }
 
-.label-draft {
+.label-przyjęte {
   background-color: #777;
 }
 
-.label-live {
-  background-color: #42a942;
+.label-gotowe {
+  background-color: #4288a9;
 }
 
-.label-error {
-  background-color: #d9534f;
+.label-wysłane {
+  background-color: #e1c25b;
+}
+
+.label-dostarczone {
+  background-color: #42a942;
 }
 
 .actions {
@@ -68,5 +74,5 @@ table {
 }
 
 .delete-btn {
-  color: #e10d05;
+  color: #36593F;
 }

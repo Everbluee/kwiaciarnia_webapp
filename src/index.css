@@ -9,6 +9,7 @@
 }
 .content {
   max-width: 1200px;
+  min-height: 58vh;
   margin: auto;
   padding: 20px;
   align-items: center;
@@ -21,14 +22,94 @@
 }
 .buttons {
   color: white;
-  background-color: #568f45;
+  background-color: #36311d;
   border-radius: 8px;
-  border-color: #568f45;
+  border-color: #36311d;
   border-style: none;
 }
 .buttons:hover {
   box-shadow: 1px 3px 5px #000000;
+  background-color: #5E7A4B;
+  cursor: pointer;
 }
+
+.multi-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.multi-button button {
+  flex: 1;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  transform: translateY(20px);
+  transition: transform 500ms, box-shadow 150ms;
+  position: relative;
+  padding: 1em 1em;
+  border: 2px solid #f2f2f2;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 2px;
+  box-shadow: 1px 1px 20px rgba(0,0,0,.1);
+  color: white;
+  background-color: #5E7A4B;
+  overflow: hidden;
+}
+
+.multi-button button::before,
+.multi-button button::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.multi-button button::after {
+  height: 0;
+  background-color: #fff;
+  transition: height 0.5s ease-in-out;
+  z-index: -1;
+  letter-spacing: 1px;
+
+}
+
+.multi-button button::before {
+  background-color: #5E7A4B;
+  height: 100%;
+  z-index: -2;
+  transition: all 300ms ease;
+  letter-spacing: 1px;
+}
+
+.multi-button button:hover {
+  color: #000000;
+  transition:all 0.5s ease;
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(10px);
+  letter-spacing: 5px;
+}
+
+.multi-button button:hover::after {
+  height: 100%;
+}
+
+.multi-button button:nth-of-type(1) {
+  border-radius: 8px 0 0 8px;
+}
+.multi-button button:nth-of-type(4) {
+  border-radius: 0 8px 8px 0;
+}
+
+
+@keyframes towhite {
+  0%   { color: inherit; }
+  100% { color: white; }
+}
+
 
 /* NAVIGATION BAR */
 .navbar {
@@ -42,7 +123,7 @@
   
 }
 .navbar h1 {
-  color: #8bc579;
+  color: #5E7A4B;
 }
 .navbar .links {
   margin-left: auto;
@@ -54,7 +135,7 @@
   color:#d8d8d8;
 }
 .navbar a:hover {
-  color: #adca8e;
+  color: #5a7b60;
 }
 
 /* HOME PAGE */
@@ -96,15 +177,11 @@
 } 
 
 .container p, 
-.container h2 {
-  color: white;
-}
-
-/* PRODUCT PAGE */
-.product-list {
-  color: white;
-}
-.product-list p {
+.container h2,
+.clients h1,
+.employees h1, 
+.orders h1,
+.product-list h1 {
   color: white;
 }
 
