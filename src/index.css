@@ -46,7 +46,7 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   transform: translateY(20px);
-  transition: transform 500ms, box-shadow 150ms;
+  transition: transform 500ms, box-shadow 150ms, letter-spacing 300ms, color 300ms;
   position: relative;
   padding: 1em 1em;
   border: 2px solid #f2f2f2;
