@@ -6,19 +6,22 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
   const [formState, setFormState] = useState(
     defaultValue || {
       // TUTAJ
-      id_zam: "",
-      data_zam: "",
-      data_wys: "",
-      status: "przyjęte do realizacji",
-      id_klienta: "",
-      koszt: "0.0",
+      id: "",
+      name: "",
+      price: "0.0",
+      place: "Nasłonecznione",
+      hum: "",
+      height: "",
+      diam: "",
+      poison: "Nie",
+      status: "Brak danych",
     }
   );
   const [errors, setErrors] = useState("");
 
   const validateForm = () => {
     // TUTAJ
-    if (formState.id_zam && formState.data_zam && formState.data_wys && formState.status && formState.id_klienta && formState.koszt) {
+    if (formState.id && formState.name && formState.hum && formState.height && formState.diam) {
       setErrors("");
       return true;
     } 
@@ -59,56 +62,86 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
       <div className="modal">
         <form>
           <div className="form-group">
-            <label htmlFor="page">ID Zamówienia</label>
+            <label htmlFor="page">ID Produktu</label>
             <input 
-              name="id_zam" 
+              name="id" 
               onChange={handleChange} 
-              value={formState.id_zam} />
+              value={formState.id} />
           </div>
           <div className="form-group">
-            <label htmlFor="description">Data zamówienia</label>
+            <label htmlFor="description">Nazwa</label>
             <input
-              type="date"
-              name="data_zam"
+              name="name"
               onChange={handleChange}
-              value={formState.data_zam}
+              value={formState.name}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="description">Data wysyłki</label>
+            <label htmlFor="description">Koszt</label>
             <input
-              type="date"
-              name="data_wys"
+              name="price"
               onChange={handleChange}
-              value={formState.data_wys}
+              value={formState.price}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="page">ID Klienta</label>
-            <input 
-              name="id_klienta" 
-              onChange={handleChange} 
-              value={formState.id_klienta} />
-          </div>
-          <div className="form-group">
-            <label htmlFor="page">Koszt</label>
-            <input 
-              name="koszt" 
-              onChange={handleChange} 
-              value={formState.koszt} />
-          </div>
-          <div className="form-group">
-            <label htmlFor="status">Status</label>
-            <select
-              name="status"
+            <label htmlFor="page">Stanowisko</label>
+              <select
+              name="place"
               onChange={handleChange}
-              value={formState.status}
+              value={formState.place}
             >
-              <option value="przyjęte do realizacji">Przyjęte do realizacji</option>
-              <option value="gotowe do wysyłki">Gotowe do wysyłki</option>
-              <option value="wysłane">Wysłane</option>
-              <option value="dostarczone">Dostarczone</option>
+              <option value="sunny">Nasłonecznione</option>
+              <option value="mid sunny">Lekko nasłonecznione</option>
+              <option value="shadow">Zacienione</option>
             </select>
+          </div>
+          <div className="form-group">
+            <label htmlFor="page">Wilgotność</label>
+            <input 
+              name="hum" 
+              onChange={handleChange} 
+              value={formState.hum} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="page">Wysokość</label>
+            <input 
+              name="height" 
+              onChange={handleChange} 
+              value={formState.height} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="page">Średnica</label>
+            <input 
+              name="diam" 
+              onChange={handleChange} 
+              value={formState.diam} />
+          </div>
+          <div className="form-group-group">
+            <div className="form-group">
+              <label htmlFor="status">Czy trująca?</label>
+              <select
+                name="poison"
+                onChange={handleChange}
+                value={formState.poison}
+              >
+                <option value="brak danych">Brak danych</option>
+                <option value="tak">Tak</option>
+                <option value="nie">Nie</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="status">Status</label>
+              <select
+                name="status"
+                onChange={handleChange}
+                value={formState.status}
+              >
+                <option value="brak danych">Brak danych</option>
+                <option value="dostępne">Dostępne</option>
+                <option value="niedostępne">Niedostępne</option>
+              </select>
+            </div>
           </div>
           {errors && <div className="error">{`Please include: ${errors}`}</div>}
           <button type="submit" className="buttons" onClick={handleSubmit} style={{width: '100px', height: '30px'}}>

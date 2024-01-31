@@ -48,7 +48,8 @@ table {
   color: white;
 }
 
-.label-przyjęte {
+.label-przyjęte, 
+.label-brak {
   background-color: #777;
 }
 
@@ -60,8 +61,15 @@ table {
   background-color: #e1c25b;
 }
 
-.label-dostarczone {
+.label-dostarczone,
+.label-dostępne, 
+.label-tak {
   background-color: #42a942;
+}
+
+.label-Nie,
+.label-niedostępne {
+  background-color: #e0293b;
 }
 
 .actions {

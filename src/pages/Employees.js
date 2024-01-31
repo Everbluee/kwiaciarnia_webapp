@@ -1,12 +1,14 @@
 import { Table } from "../components/TableEmployee";
 import { Modal } from "../components/ModalEmployee";
 import { useState } from "react";
+import useFetch from "../components/useFetch";
 
 const Employees = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [rows, setRows] = useState([
         //TUTAJ
         {
+            id: "1",
             name: "Kamila",
             surname: "Chmura",
             age: "21",
@@ -14,28 +16,47 @@ const Employees = () => {
             tel: "123456789",
             salary: "4000.0",
             pos: "Sekretarka",
-            //status: "live",
         },
     ]);
+    //useFetch('http://localhost:8080/api/person/employees', setRows);
     const [rowToEdit, setRowToEdit] = useState(null);
 
     const handleDeleteRow = (targetIndex) => {
+        // const orderIdToDelete = rows[targetIndex].id;
+    
+        // fetch(`http://localhost:8080/api/person/employee/${orderIdToDelete}`, {
+        //     method: 'DELETE'
+        // })
+        //     .then(response => {
+        //         if (!response.ok) { throw new Error('Network response was not ok'); }
+        //         return response.json();
+        //     })
+        //     .then(data => setRows(rows.filter((_, idx) => idx !== targetIndex)))
+        //     .catch(error => console.error('Error fetching data:', error));
         setRows(rows.filter((_, idx) => idx !== targetIndex));
     };
 
     const handleEditRow = (idx) => {
         setRowToEdit(idx);
-
         setModalOpen(true);
     };
 
     const handleSubmit = (newRow) => {
+        // const requestOptions = {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify(newRow)
+        // };
+    
+        // fetch('http://localhost:8080/api/person/employee/add', requestOptions)
+        //     .then(response => response.json())
+        //     .then(data => setRows([...rows, data]);)
+        //     .catch(error => console.error('Wystąpił błąd podczas wysyłania danych:', error));
         rowToEdit === null
             ? setRows([...rows, newRow])
             : setRows(
                 rows.map((currRow, idx) => {
                     if (idx !== rowToEdit) return currRow;
-
                     return newRow;
                 })
             );

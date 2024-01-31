@@ -6,19 +6,21 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
   const [formState, setFormState] = useState(
     defaultValue || {
       // TUTAJ
-      id_zam: "",
-      data_zam: "",
-      data_wys: "",
-      status: "przyjęte do realizacji",
-      id_klienta: "",
-      koszt: "0.0",
+      id: "",
+      name: "",
+      price: "0.0",
+      producent: "",
+      color: "",
+      material: "",
+      diam: "",
+      status: "Dostępne",
     }
   );
   const [errors, setErrors] = useState("");
 
   const validateForm = () => {
     // TUTAJ
-    if (formState.id_zam && formState.data_zam && formState.data_wys && formState.status && formState.id_klienta && formState.koszt) {
+    if (formState.id && formState.name && formState.producent && formState.color && formState.material && formState.diam) {
       setErrors("");
       return true;
     } 
@@ -57,45 +59,58 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
     >
       {/* TUTAJ */}
       <div className="modal">
-        <form>
+      <form>
           <div className="form-group">
-            <label htmlFor="page">ID Zamówienia</label>
+            <label htmlFor="page">ID Produktu</label>
             <input 
-              name="id_zam" 
+              name="id" 
               onChange={handleChange} 
-              value={formState.id_zam} />
+              value={formState.id} />
           </div>
           <div className="form-group">
-            <label htmlFor="description">Data zamówienia</label>
+            <label htmlFor="description">Nazwa</label>
             <input
-              type="date"
-              name="data_zam"
+              name="name"
               onChange={handleChange}
-              value={formState.data_zam}
+              value={formState.name}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="description">Data wysyłki</label>
+            <label htmlFor="description">Koszt</label>
             <input
-              type="date"
-              name="data_wys"
+              name="price"
               onChange={handleChange}
-              value={formState.data_wys}
+              value={formState.price}
             />
           </div>
           <div className="form-group">
-            <label htmlFor="page">ID Klienta</label>
-            <input 
-              name="id_klienta" 
-              onChange={handleChange} 
-              value={formState.id_klienta} />
+            <label htmlFor="page">Producent</label>
+            <input
+            name="producent"
+            onChange={handleChange}
+            value={formState.producent}
+            />
           </div>
           <div className="form-group">
-            <label htmlFor="page">Koszt</label>
+            <label htmlFor="page">Kolor</label>
             <input 
-              name="koszt" 
+              name="color" 
               onChange={handleChange} 
-              value={formState.koszt} />
+              value={formState.color} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="page">Materiał</label>
+            <input 
+              name="material" 
+              onChange={handleChange} 
+              value={formState.material} />
+          </div>
+          <div className="form-group">
+            <label htmlFor="page">Średnica</label>
+            <input 
+              name="diam" 
+              onChange={handleChange} 
+              value={formState.diam} />
           </div>
           <div className="form-group">
             <label htmlFor="status">Status</label>
@@ -104,10 +119,9 @@ export const Modal = ({ closeModal, onSubmit, defaultValue }) => {
               onChange={handleChange}
               value={formState.status}
             >
-              <option value="przyjęte do realizacji">Przyjęte do realizacji</option>
-              <option value="gotowe do wysyłki">Gotowe do wysyłki</option>
-              <option value="wysłane">Wysłane</option>
-              <option value="dostarczone">Dostarczone</option>
+              <option value="brak danych">Brak danych</option>
+              <option value="dostępne">Dostępne</option>
+              <option value="niedostępne">Niedostępne</option>
             </select>
           </div>
           {errors && <div className="error">{`Please include: ${errors}`}</div>}

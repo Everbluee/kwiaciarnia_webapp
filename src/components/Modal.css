@@ -23,6 +23,17 @@
   margin: auto;
 }
 
+.form-group-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  justify-content: space-around
+}
+.form-group-group .form-group {
+  width: 40%;
+}
+
 .form-group {
   display: flex;
   flex-direction: column;

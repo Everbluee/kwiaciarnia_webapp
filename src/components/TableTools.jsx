@@ -11,12 +11,11 @@ export const Table = ({ rows, deleteRow, editRow }) => {
         <thead>
           <tr>
             {/* TUTAJ */}
-            <th>ID Zamówienia</th>
-            <th>Data Zamówienia</th>
-            <th>Data wysyłki</th>
-            <th>ID Klienta</th>
+            <th>ID Produktu</th>
+            <th style={{width: '50%'}}>Nazwa</th>
             <th>Koszt</th>
-            <th style={{width: '100%'}}>Status</th>
+            <th style={{width: '50%'}}>Producent</th>
+            <th>Status</th>
             <th> . . . </th>
           </tr>
         </thead>
@@ -28,11 +27,10 @@ export const Table = ({ rows, deleteRow, editRow }) => {
             return (
               <tr key={idx}>
 
-                <td>{row.id_zam}</td>
-                <td>{row.data_zam}</td>
-                <td>{row.data_wys}</td>
-                <td>{row.id_klienta}</td>
-                <td>{row.koszt}</td>
+                <td>{row.id}</td>
+                <td style={{width: '50%'}}>{row.name}</td>
+                <td>{row.price}</td>
+                <td style={{width: '50%'}}>{row.producent}</td>
 
                 <td>
                   <span className={`label label-${row.status}`}>
