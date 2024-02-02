@@ -15,7 +15,7 @@ const Nav = () => {
                 <Link to="employees/">Pracownicy <FontAwesomeIcon icon={faUserTie}/> </Link>
                 <Link to="clients/">Klienci <FontAwesomeIcon icon={faUser}/></Link>
                 <Link to="orders/">Zamówienia <FontAwesomeIcon icon={faTruckFast} /></Link>
-                <Link to="login" className='buttons' style={{color: "white"}}> LOG IN <Icon path={mdiCheck} size={1} className='icons'/></Link>
+                {/* <Link to="login" className='buttons' style={{color: "white"}}> LOG IN <Icon path={mdiCheck} size={1} className='icons'/></Link> */}
             </div>
         </nav>
     );
