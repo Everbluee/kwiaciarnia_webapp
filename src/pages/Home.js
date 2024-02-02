@@ -29,16 +29,14 @@ const Home = () => {
             <div className="box">
                 <h2>Klienci</h2>
                 <p>Tutaj będziesz mógł zobaczyć kto kupuje u nas w sklepie. Zbieramy dane na temat naszych klientów, aby później łatwiej
-                    było nam się z nimi komunikować. Dla każdego klienta będziesz mógł zobaczyć historię zamówień jakie złożył i jeśli
-                    jakieś złożył, a także jego dane i to czy jest stałym klientem.
+                    było nam się z nimi komunikować. Dla każdego klienta będziesz mógł zobaczyć jego dane i to czy jest stałym klientem.
                 </p>
             </div>
             <div className="box">
                 <h2>Zamówienia</h2>
                 <p>Ta zakładka oferuje nam bogactwo zamówień jakie zostały kiedykolwiek złożone od początku istnienia firmy.
                     Jesteśmy w stanie spojrzeć na zamówienia, które przeszły już do historii, a także śledzić postępy przy zamówieniach, 
-                    które nie zostały jeszcze dostarczone do klienta. Dla każdego zamówienia zapewniana jest informacja o wysyłce, jak i 
-                    o kliencie, który złożył zamówienie. 
+                    które nie zostały jeszcze dostarczone do klienta. 
                 </p>
             </div>
         </div>
