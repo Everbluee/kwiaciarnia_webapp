@@ -19,7 +19,7 @@ const Clients = () => {
             regular: "Tak",
         },
     ]);
-    useFetch('http://localhost:8080/api/person/clients', setRows);
+    //useFetch('http://localhost:8080/api/person/clients', setRows);
     const [rowToEdit, setRowToEdit] = useState(null);
     const [modalOpen, setModalOpen] = useState(false);
 
